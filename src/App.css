@@ -1,0 +1,366 @@
+#root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* card styles */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: black;
+  color: white;
+  padding: 1rem;
+  margin-top: 3rem;
+  border-radius: 0.5rem;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+}
+
+.card-image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  border: 2px solid #515bd4;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1px);
+  z-index: 0;
+}
+
+.card-body {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: var(--radius);
+  margin-top: auto;
+  height: 12rem;
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: white; 
+}
+
+.card-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.card-actions img,
+.social-links img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.card p {
+  color: white;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+
+/* Header styles */
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #242424;
+}
+
+.App-header {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.header-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.header-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.header-content h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+}
+
+.header-content button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: #646cff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header-content button:nth-of-type(1) {
+  top: 60%;
+  margin-left: -7rem;
+}
+
+.header-content button:nth-of-type(2) {
+  top: 60%;
+  margin-left: 7rem;
+}
+
+.header-content button:hover {
+  background-color: #515bd4;
+}
+
+.additional-content {
+  background-color: #242424;
+}
+.additional-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #242424;
+  padding: 2rem;
+}
+
+/* ViewCreator Styles */
+.view-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.view-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.card-view-image {
+  flex-shrink: 0;
+  width: 300px;
+  height: 400px;
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #515bd4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-view-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-view-image .placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-size: 2rem;
+}
+
+.view-additional-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.view-additional-container h2 {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: white;
+}
+
+.view-additional-container p {
+  margin-bottom: 1rem;
+  color: white;
+  display: block;
+  justify-items: left;
+}
+
+.social-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-links li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.social-links img {
+  margin-right: 0.5rem;
+}
+
+.view-button {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.button {
+  background-color: #646cff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #515bd4;
+}
+
+.button.secondary {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button.secondary:hover {
+  background-color: darkred;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(225, 214, 214, 0.7);
+  color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button.cancel {
+  background-color: gray;
+}
+
+.warning-title {
+  font-weight: bold;
+}
+
+.warning-message {
+  font-weight: bold;
+}
+
+
+/* editCreator */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.update-button, .button.secondary {
+  flex: 1;
+}
+
